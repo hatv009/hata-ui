@@ -1,0 +1,30 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "hata-ui",
+  "homepage": "https://github.com/hatv009/hata-ui",
+  "items": [
+    {
+      "name": "project-conventions",
+      "type": "registry:item",
+      "title": "Project Conventions",
+      "description": "Shared project conventions, editor settings and agent instructions.",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "type": "registry:file",
+          "target": "~/AGENTS.md"
+        },
+        {
+          "path": ".editorconfig",
+          "type": "registry:file",
+          "target": "~/.editorconfig"
+        },
+        {
+          "path": "docs/conventions.md",
+          "type": "registry:file",
+          "target": "~/docs/conventions.md"
+        }
+      ]
+    }
+  ]
+}
