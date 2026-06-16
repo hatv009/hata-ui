@@ -20,9 +20,9 @@
           "target": "~/.editorconfig"
         },
         {
-          "path": "docs/conventions.md",
+          "path": "docs/README.md",
           "type": "registry:file",
-          "target": "~/docs/conventions.md"
+          "target": "~/docs/README.md"
         }
       ]
     }
