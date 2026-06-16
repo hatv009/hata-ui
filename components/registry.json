@@ -5,6 +5,10 @@
       "name": "input",
       "type": "registry:item",
       "description": "Input",
+      "registryDependencies": [
+        "hatv009/hata-ui/helpers-utilities",
+        "fields"
+      ],
       "files": [
         {
           "path": "ui/input.tsx",

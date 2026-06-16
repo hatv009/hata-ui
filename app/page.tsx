@@ -1,4 +1,3 @@
-import { FloatingInput } from "@/components/blocks/floating-input";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
 
