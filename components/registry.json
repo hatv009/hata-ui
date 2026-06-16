@@ -12,8 +12,8 @@
       "files": [
         {
           "path": "ui/input.tsx",
-          "type": "registry:file",
-          "target": "~/components/ui/input.tsx"
+          "type": "registry:component",
+          "target": "components/ui/input.tsx"
         }
       ]
     }
