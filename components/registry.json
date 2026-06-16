@@ -7,7 +7,7 @@
       "description": "Input",
       "registryDependencies": [
         "hatv009/hata-ui/helpers-utilities",
-        "fields"
+        "field"
       ],
       "files": [
         {
