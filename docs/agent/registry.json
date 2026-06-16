@@ -4,6 +4,7 @@
     {
       "name": "agent-rules",
       "type": "registry:file",
+      "description": "Project Nextjs structure, Git, UI, Validate rules.",
       "files": [
         {
           "path": "code-structure.md",

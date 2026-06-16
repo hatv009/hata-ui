@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "input",
+      "type": "registry:item",
+      "description": "Input",
+      "files": [
+        {
+          "path": "ui/input.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/input.tsx"
+        }
+      ]
+    }
+  ]
+}
