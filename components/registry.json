@@ -19,22 +19,6 @@
           "target": "@components/blocks/floating-input.tsx"
         }
       ]
-    },
-    {
-      "name": "input",
-      "type": "registry:ui",
-      "title": "Input",
-      "description": "Input UI primitive.",
-      "registryDependencies": [
-        "hatv009/hata-ui/helpers-utilities"
-      ],
-      "files": [
-        {
-          "path": "ui/input.tsx",
-          "type": "registry:ui",
-          "target": "@ui/input.tsx"
-        }
-      ]
     }
   ]
 }

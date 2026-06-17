@@ -1,0 +1,3 @@
+{
+  "buildCommand": "corepack pnpm registry:build && corepack pnpm build"
+}

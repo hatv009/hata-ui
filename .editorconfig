@@ -1,0 +1,24 @@
+# http://editorconfig.org
+root = true
+
+# Cấu hình chung cho TẤT CẢ các file
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Cấu hình riêng cho code React, JavaScript, TypeScript và cấu hình JSON
+[*.{js,jsx,ts,tsx,json}]
+indent_size = 2
+
+# Cấu hình cho Style (CSS, SCSS, LESS) và HTML
+[*.{html,css,scss,less}]
+indent_size = 2
+
+# Cấu hình riêng cho các file Markdown (.md)
+# Thường giữ lại khoảng trắng ở cuối dòng vì Markdown dùng nó để xuống hàng (<br/>)
+[*.md]
+trim_trailing_whitespace = false

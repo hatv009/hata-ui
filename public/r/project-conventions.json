@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "project-conventions",
+  "title": "Project Conventions",
+  "description": "Shared project conventions, editor settings and agent instructions.",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "content": "<!-- BEGIN:nextjs-agent-rules -->\n# This is NOT the Next.js you know\n\nThis version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.\n<!-- END:nextjs-agent-rules -->\n\n## Agent Rule Files\n\n- Code structure: `docs/agent/code-structure.md`\n- UI rules: `docs/agent/ui-rules.md`\n- Environment and secrets: `docs/agent/environment-and-secrets.md`\n- Validation: `docs/agent/validation.md`\n- Git workflow: `docs/agent/git.md`\n- MCP/tooling: `docs/agent/mcp.md`\n",
+      "type": "registry:file",
+      "target": "~/AGENTS.md"
+    },
+    {
+      "path": "docs/README.md",
+      "content": "# Documentation Map\n\n## Agent Rules\n\n- `agent/code-structure.md` - feature-based code organization.\n- `agent/ui-rules.md` - shadcn/ui, lucide, pnpm, and Vietnamese UI rules.\n- `agent/environment-and-secrets.md` - Supabase and environment secret handling.\n- `agent/validation.md` - validation level by change type.\n- `agent/git.md` - branch, staging, commit, and validation rules.\n- `agent/mcp.md` - MCP and shadcn tooling notes.\n\n## Registry\n\n- `registry-ship.md` - how to register components, blocks, pages, hooks, and utilities with `pnpm ship`.\n\nRoot `../AGENTS.md` is the short entrypoint that points to these files.\n",
+      "type": "registry:file",
+      "target": "~/docs/README.md"
+    }
+  ],
+  "type": "registry:item"
+}
