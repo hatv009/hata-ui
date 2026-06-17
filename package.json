@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "ship": "node scripts/registry-ship.mjs",
-    "registry:validate": "shadcn registry validate ./registry.json",
-    "registry:build": "shadcn build ./registry.json -o ./public/r"
+    "validate": "shadcn registry validate ./registry.json"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

@@ -18,6 +18,11 @@
           "type": "registry:file",
           "target": "~/AGENTS.md"
         },
+          {
+          "path": ".editorconfig",
+          "type": "registry:file",
+          "target": "~/.editorconfig"
+        },
         {
           "path": "docs/README.md",
           "type": "registry:file",
