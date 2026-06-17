@@ -1,0 +1,29 @@
+{
+  "$schema": "./registry.ship.schema.json",
+  "include": [
+    "components/ui/*.{ts,tsx}",
+    "components/blocks/*.{ts,tsx}",
+    "app/examples/**/page.{ts,tsx}",
+    "lib/utils.ts",
+    "hooks/*.{ts,tsx}"
+  ],
+  "exclude": [
+    "app/components/**",
+    "app/docs/**",
+    "app/page.tsx",
+    "components/docs/**",
+    "components/ui/**",
+    "lib/registry-data.ts",
+    "**/*.test.*",
+    "**/*.spec.*",
+    "**/*.stories.*"
+  ],
+  "types": {
+    "components/ui/*.{ts,tsx}": "ui",
+    "components/blocks/*.{ts,tsx}": "block",
+    "app/examples/**/page.{ts,tsx}": "page",
+    "lib/utils.ts": "lib",
+    "hooks/*.{ts,tsx}": "hook"
+  },
+  "defaults": {}
+}

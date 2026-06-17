@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hata UI Registry Ship Config",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "exclude": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "types": {
+      "type": "object",
+      "additionalProperties": {
+        "enum": ["ui", "component", "block", "page", "lib", "hook", "file"]
+      }
+    },
+    "defaults": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}
