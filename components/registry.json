@@ -2,18 +2,37 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "items": [
     {
-      "name": "input",
-      "type": "registry:item",
-      "description": "Input",
+      "name": "floating-input",
+      "type": "registry:block",
+      "title": "Floating Input",
+      "description": "Input with label floating",
       "registryDependencies": [
+        "field",
         "hatv009/hata-ui/helpers-utilities",
-        "field"
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "blocks/floating-input.tsx",
+          "type": "registry:component",
+          "target": "@components/blocks/floating-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "Input UI primitive.",
+      "registryDependencies": [
+        "hatv009/hata-ui/helpers-utilities"
       ],
       "files": [
         {
           "path": "ui/input.tsx",
-          "type": "registry:component",
-          "target": "components/ui/input.tsx"
+          "type": "registry:ui",
+          "target": "@ui/input.tsx"
         }
       ]
     }

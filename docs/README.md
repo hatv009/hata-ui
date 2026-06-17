@@ -9,4 +9,8 @@
 - `agent/git.md` - branch, staging, commit, and validation rules.
 - `agent/mcp.md` - MCP and shadcn tooling notes.
 
+## Registry
+
+- `registry-ship.md` - how to register components, blocks, pages, hooks, and utilities with `pnpm ship`.
+
 Root `../AGENTS.md` is the short entrypoint that points to these files.

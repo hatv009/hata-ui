@@ -2,7 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "hata-ui",
   "homepage": "https://github.com/hatv009/hata-ui",
-  "include": ["docs/agent/registry.json", "components/registry.json"],
+  "include": [
+    "components/registry.json",
+    "docs/agent/registry.json"
+  ],
   "items": [
     {
       "name": "project-conventions",
@@ -22,15 +25,16 @@
         }
       ]
     },
-     {
+    {
       "name": "helpers-utilities",
-      "type": "registry:item",
-      "title": "Helpers and utilities",
+      "type": "registry:lib",
+      "title": "Helpers and Utilities",
+      "description": "Shared utility helpers for Hata UI components.",
       "files": [
         {
           "path": "lib/utils.ts",
-          "type": "registry:file",
-          "target": "~/lib/utils.ts"
+          "type": "registry:lib",
+          "target": "@lib/utils.ts"
         }
       ]
     }
