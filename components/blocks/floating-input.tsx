@@ -1,4 +1,4 @@
-import { Field, FieldDescription, FieldLabel } from "@/components/ui/field";
+import { Field, FieldDescription } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
@@ -37,4 +37,5 @@ function FloatingInput() {
   );
 }
 
-export { FloatingInput, FieldLabelFloating };
+export { FieldLabelFloating, FloatingInput };
+

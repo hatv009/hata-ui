@@ -1,7 +1,11 @@
 import Link from "next/link";
 
+
 import { Separator } from "@/components/ui/separator";
+import ComboboxDemo from "@/features/combobox-demo";
 import { getGitHubInstallCommand, getRegistryItems, getRegistryStats } from "@/lib/registry-data";
+
+
 
 export default function Home() {
   const items = getRegistryItems();
@@ -66,6 +70,12 @@ export default function Home() {
           <Metric label="Dependencies" value={stats.dependencyCount} />
         </section>
 
+        <Separator />
+        <h2 className="text-2xl font-medium">Example</h2>
+        <div className="flex flex-col">
+        <ComboboxDemo/>
+        </div>
+       
         <Separator />
 
         <section className="space-y-5">

@@ -11,8 +11,10 @@
     "validate": "shadcn registry validate ./registry.json"
   },
   "dependencies": {
+    "@base-ui/react": "^1.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "cmdk": "^1.1.1",
     "lucide-react": "^1.18.0",
     "next": "16.2.9",
     "radix-ui": "^1.6.0",
