@@ -2,6 +2,27 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "items": [
     {
+      "name": "combobox",
+      "type": "registry:block",
+      "title": "Combobox",
+      "description": "Combobox registry item.",
+      "dependencies": [
+        "lucide-react",
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "hatv009/hata-ui/helpers-utilities",
+        "input-group"
+      ],
+      "files": [
+        {
+          "path": "blocks/combobox.tsx",
+          "type": "registry:component",
+          "target": "@components/blocks/combobox.tsx"
+        }
+      ]
+    },
+    {
       "name": "floating-input",
       "type": "registry:block",
       "title": "Floating Input",

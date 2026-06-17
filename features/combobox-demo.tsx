@@ -1,39 +1,35 @@
-'use client';
-import { Combobox, ComboboxContent, ComboboxInput } from "@/components/blocks/combobox";
-import { Command, CommandEmpty, CommandGroup, CommandItem, CommandList } from "@/components/ui/command";
+"use client"
+
+import {
+  Combobox,
+  ComboboxContent,
+  ComboboxInput,
+  ComboboxItem,
+  ComboboxList,
+} from "@/components/blocks/combobox"
+
 const frameworks = [
-  { value: "nextjs", label: "Next.js" },
-  { value: "sveltekit", label: "SvelteKit" },
-  { value: "nuxt", label: "Nuxt.js" },
-  { value: "remix", label: "Remix" },
-  { value: "astro", label: "Astro" },
+  { value: "nextjs", label: "Next.js", keywords: ["react", "vercel"] },
+  { value: "sveltekit", label: "SvelteKit", keywords: ["svelte"] },
+  { value: "nuxt", label: "Nuxt.js", keywords: ["vue"] },
+  { value: "remix", label: "Remix", keywords: ["react"] },
+  { value: "astro", label: "Astro", keywords: ["content"] },
 ]
 
 const ComboboxDemo = () => {
   return (
-    <Combobox>
-          <ComboboxInput className="w-40" showClear/>
-          <ComboboxContent className="p-0">
-            <Command>
-          <CommandList>
-            <CommandEmpty>Không có kết quả.</CommandEmpty>
-            <CommandGroup>
-              {frameworks.map((option) => (
-                <CommandItem
-                  key={option.value}
-                  value={option.label}
-                  onSelect={() => {
-                  }}
-                >
-                  {/* <Check className={value === option.value ? "mr-2 h-4 w-4 opacity-100" : "mr-2 h-4 w-4 opacity-0"} /> */}
-                  {option.label}
-                </CommandItem>
-              ))}
-            </CommandGroup>
-          </CommandList>
-        </Command>
-          </ComboboxContent>
-        </Combobox>
+    <Combobox items={frameworks} autoHighlight>
+      <ComboboxInput className="w-56" placeholder="Tìm framework..." />
+      <ComboboxContent>
+        <ComboboxList empty="Không có kết quả.">
+          {(item) => (
+            <ComboboxItem key={item.value} value={item.value}>
+              {item.label}
+            </ComboboxItem>
+          )}
+        </ComboboxList>
+      </ComboboxContent>
+    </Combobox>
   )
 }
 
