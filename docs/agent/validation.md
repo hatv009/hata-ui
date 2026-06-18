@@ -12,9 +12,7 @@ Run these before considering implementation complete:
 
 ## 3. Registry Changes
 
-- Validate source registry: `corepack.cmd pnpm registry:validate`.
-- Build static registry JSON: `corepack.cmd pnpm registry:build`.
-- Inspect generated `public/r/<item>.json` when component source, dependencies, or targets change.
+- Validate source registry: `corepack.cmd pnpm validate`.
 
 ## 4. Documentation-Only Changes
 

@@ -45,13 +45,7 @@ corepack.cmd pnpm ship floating
 Validate the whole registry:
 
 ```bash
-corepack.cmd pnpm registry:validate
-```
-
-Build static registry JSON into `public/r`:
-
-```bash
-corepack.cmd pnpm registry:build
+corepack.cmd pnpm validate
 ```
 
 ## What Gets Inferred

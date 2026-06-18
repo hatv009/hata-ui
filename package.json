@@ -15,9 +15,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "ship": "node scripts/registry-ship.mjs",
-    "validate": "shadcn registry validate ./registry.json",
-    "registry:validate": "shadcn registry validate ./registry.json",
-    "registry:build": "node scripts/registry-build.mjs"
+    "validate": "shadcn registry validate ./registry.json"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",

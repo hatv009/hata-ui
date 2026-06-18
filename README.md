@@ -28,11 +28,10 @@ Ship a component into the source registry:
 corepack.cmd pnpm ship components/blocks/floating-input/index.tsx
 ```
 
-Validate and build static registry JSON:
+Validate registry JSON:
 
 ```bash
-corepack.cmd pnpm registry:validate
-corepack.cmd pnpm registry:build
+corepack.cmd pnpm validate
 ```
 
 Static item JSON is written to `public/r/<item>.json`.
