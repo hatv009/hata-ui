@@ -10,6 +10,7 @@ export const metadata = {
 const inferenceRows = [
   ["components/ui/*.tsx", "registry:ui", "@ui/<file>.tsx"],
   ["components/blocks/*.tsx", "registry:block", "@components/blocks/<file>.tsx"],
+  ["components/blocks/*/index.tsx", "registry:block", "@components/blocks/<name>.tsx"],
   ["app/**/page.tsx", "registry:page", "same app path"],
   ["lib/*.ts", "registry:lib", "@lib/<file>.ts"],
   ["hooks/*.ts", "registry:hook", "@hooks/<file>.ts"],
@@ -65,7 +66,7 @@ export default function RegistryShipDocsPage() {
         <section className="grid gap-4">
           <CommandBlock command="corepack.cmd pnpm ship" />
           <CommandBlock command="corepack.cmd pnpm ship components/ui/input.tsx" />
-          <CommandBlock command="corepack.cmd pnpm ship components/blocks/floating-input.tsx" />
+          <CommandBlock command="corepack.cmd pnpm ship components/blocks/floating-input/index.tsx" />
           <CommandBlock command="corepack.cmd pnpm ship app/examples/login/page.tsx --dry-run" />
           <CommandBlock command="corepack.cmd pnpm ship --list --new" />
           <CommandBlock command="corepack.cmd pnpm ship --changed" />

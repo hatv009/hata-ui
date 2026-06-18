@@ -16,7 +16,7 @@
       ],
       "files": [
         {
-          "path": "blocks/combobox.tsx",
+          "path": "blocks/combobox/index.tsx",
           "type": "registry:component",
           "target": "@components/blocks/combobox.tsx"
         }
@@ -35,7 +35,7 @@
       ],
       "files": [
         {
-          "path": "blocks/floating-input.tsx",
+          "path": "blocks/floating-input/index.tsx",
           "type": "registry:component",
           "target": "@components/blocks/floating-input.tsx"
         }

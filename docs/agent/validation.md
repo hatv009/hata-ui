@@ -9,7 +9,6 @@ Run these before considering implementation complete:
 
 - **Format:** Use UTF-8 and write readable Vietnamese directly. Do NOT use Unicode escape sequences.
 - **Verify:** If edited via PowerShell or bulk rewrite, manually check source files for readability.
-- **Scan for Mojibake:** `rg "Ã|Ä|Æ|Â|Ð|°|áº|á»" app components features lib docs -g "!docs/agent/validation.md"`
 
 ## 3. Registry Changes
 

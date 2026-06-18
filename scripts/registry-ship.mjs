@@ -183,9 +183,12 @@ function inferRegistryItem(sourcePath, args) {
 
   const fileName = path.posix.basename(sourcePath);
   const extensionlessName = fileName.replace(/\.[^.]+$/, "");
+  const blockFolderIndexMatch = sourcePath.match(/^components\/blocks\/([^/]+)\/index\.[^.]+$/);
   const name =
     args.name ??
-    (normalizedType === "registry:page"
+    (blockFolderIndexMatch
+      ? kebabCase(blockFolderIndexMatch[1])
+      : normalizedType === "registry:page"
       ? kebabCase(sourcePath.replace(/^app\//, "").replace(/\/page\.[^.]+$/, "-page"))
       : kebabCase(extensionlessName));
 
@@ -657,7 +660,14 @@ function loadShipConfig(cwd) {
   if (!existsSync(configPath)) {
     return {
       exclude: [],
-      include: ["components/ui/*.{ts,tsx}", "components/blocks/*.{ts,tsx}", "app/**/page.{ts,tsx}", "lib/*.{ts,tsx}", "hooks/*.{ts,tsx}"],
+      include: [
+        "components/ui/*.{ts,tsx}",
+        "components/blocks/*.{ts,tsx}",
+        "components/blocks/*/index.{ts,tsx}",
+        "app/**/page.{ts,tsx}",
+        "lib/*.{ts,tsx}",
+        "hooks/*.{ts,tsx}",
+      ],
       types: {},
     };
   }
@@ -804,6 +814,10 @@ function inferTypeFromPath(sourcePath) {
     return "registry:block";
   }
 
+  if (/^components\/blocks\/[^/]+\/index\.(tsx|ts|jsx|js)$/.test(sourcePath)) {
+    return "registry:block";
+  }
+
   if (/^app\/.+\/page\.(tsx|ts|jsx|js)$/.test(sourcePath) || /^app\/page\.(tsx|ts|jsx|js)$/.test(sourcePath)) {
     return "registry:page";
   }
@@ -824,6 +838,13 @@ function inferTarget(sourcePath, itemType) {
 
   switch (itemType) {
     case "registry:block":
+      if (/^components\/blocks\/[^/]+\/index\.(tsx|ts|jsx|js)$/.test(sourcePath)) {
+        const blockName = sourcePath.split("/")[2];
+        const extension = path.posix.extname(sourcePath);
+
+        return `@components/blocks/${blockName}${extension}`;
+      }
+
       return `@components/blocks/${fileName}`;
     case "registry:component":
       return `@components/${fileName}`;

@@ -3,6 +3,7 @@
   "include": [
     "components/ui/*.{ts,tsx}",
     "components/blocks/*.{ts,tsx}",
+    "components/blocks/*/index.{ts,tsx}",
     "app/examples/**/page.{ts,tsx}",
     "lib/utils.ts",
     "hooks/*.{ts,tsx}"
@@ -21,6 +22,7 @@
   "types": {
     "components/ui/*.{ts,tsx}": "ui",
     "components/blocks/*.{ts,tsx}": "block",
+    "components/blocks/*/index.{ts,tsx}": "block",
     "app/examples/**/page.{ts,tsx}": "page",
     "lib/utils.ts": "lib",
     "hooks/*.{ts,tsx}": "hook"

@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
-import { FloatingInput } from "./floating-input";
+import { FloatingInput } from "./index";
 
 describe("FloatingInput", () => {
   it("renders the default label and description", () => {

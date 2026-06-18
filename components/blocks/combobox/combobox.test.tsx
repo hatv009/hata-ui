@@ -8,7 +8,7 @@ import {
   ComboboxInput,
   ComboboxItem,
   ComboboxList,
-} from "./combobox";
+} from "./index";
 
 const items = [
   { value: "next", label: "Next.js" },

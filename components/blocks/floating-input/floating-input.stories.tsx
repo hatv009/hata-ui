@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
-import { FloatingInput } from "./floating-input";
+import { FloatingInput } from "./index";
 
 const meta = {
   component: FloatingInput,

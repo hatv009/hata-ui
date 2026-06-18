@@ -25,7 +25,7 @@ corepack.cmd pnpm storybook
 Ship a component into the source registry:
 
 ```bash
-corepack.cmd pnpm ship components/blocks/floating-input.tsx
+corepack.cmd pnpm ship components/blocks/floating-input/index.tsx
 ```
 
 Validate and build static registry JSON:

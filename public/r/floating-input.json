@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "floating-input",
+  "title": "Floating Input",
+  "description": "Input field with an accessible floating label, helper text, and invalid or disabled states.",
+  "registryDependencies": [
+    "field",
+    "hatv009/hata-ui/helpers-utilities",
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "components/blocks/floating-input/index.tsx",
+      "content": "import type * as React from \"react\";\n\nimport { Field, FieldDescription } from \"@/components/ui/field\";\nimport { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\nimport { cn } from \"@/lib/utils\";\n\ntype FieldLabelFloatingProps = React.ComponentProps<typeof Label>;\n\ntype FloatingInputProps = React.ComponentProps<typeof Input> & {\n  description?: React.ReactNode;\n  label?: React.ReactNode;\n};\n\nfunction FieldLabelFloating({\n  className,\n  ...props\n}: FieldLabelFloatingProps) {\n  return (\n    <Label\n      data-slot=\"field-label\"\n      className={cn(\n        \"group/field-label peer/field-label flex w-fit! gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-data-checked:border-primary/30 has-data-checked:bg-primary/5 has-[>[data-slot=field]]:rounded-md has-[>[data-slot=field]]:border *:data-[slot=field]:p-3 dark:has-data-checked:border-primary/20 dark:has-data-checked:bg-primary/10\",\n        \"pointer-events-none absolute left-2 z-10 origin-left bg-background px-1 transition-all duration-200\",\n        \"top-1/3 -translate-y-2/3\",\n        \"peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:scale-75\",\n        \"peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:-translate-y-1/2 peer-not-placeholder-shown:scale-75\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n\nfunction FloatingInput({\n  className,\n  description = \"Tên này sẽ hiển thị công khai.\",\n  id = \"username\",\n  label = \"Tên đăng nhập\",\n  ...props\n}: FloatingInputProps) {\n  return (\n    <Field className=\"relative\">\n      <Input\n        id={id}\n        placeholder=\" \"\n        className={cn(\"peer placeholder-transparent\", className)}\n        {...props}\n      />\n      <FieldLabelFloating htmlFor={id}>{label}</FieldLabelFloating>\n      {description ? <FieldDescription>{description}</FieldDescription> : null}\n    </Field>\n  );\n}\n\nexport { FieldLabelFloating, FloatingInput, type FloatingInputProps };\n",
+      "type": "registry:component",
+      "target": "@components/blocks/floating-input.tsx"
+    }
+  ],
+  "type": "registry:block"
+}

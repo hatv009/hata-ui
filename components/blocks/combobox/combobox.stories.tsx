@@ -7,7 +7,7 @@ import {
   ComboboxInput,
   ComboboxItem,
   ComboboxList,
-} from "./combobox";
+} from "./index";
 
 const frameworkItems = [
   { value: "next", label: "Next.js", keywords: ["react", "app router"] },

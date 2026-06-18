@@ -9,7 +9,7 @@ The command does not create source files. Create or edit the component first, th
 ```bash
 corepack.cmd pnpm ship
 corepack.cmd pnpm ship components/ui/input.tsx
-corepack.cmd pnpm ship components/blocks/floating-input.tsx
+corepack.cmd pnpm ship components/blocks/floating-input/index.tsx
 corepack.cmd pnpm ship app/examples/login/page.tsx
 ```
 
@@ -62,6 +62,7 @@ corepack.cmd pnpm registry:build
 | --- | --- | --- |
 | `components/ui/*.tsx` | `registry:ui` | `@ui/<file>.tsx` |
 | `components/blocks/*.tsx` | `registry:block` | `@components/blocks/<file>.tsx` |
+| `components/blocks/*/index.tsx` | `registry:block` | `@components/blocks/<name>.tsx` |
 | `app/**/page.tsx` | `registry:page` | same app path |
 | `lib/*.ts` | `registry:lib` | `@lib/<file>.ts` |
 | `hooks/*.ts` | `registry:hook` | `@hooks/<file>.ts` |
@@ -102,6 +103,7 @@ It keeps `pnpm ship --new`, `pnpm ship --changed`, fuzzy queries, and no-path ru
   "include": [
     "components/ui/*.{ts,tsx}",
     "components/blocks/*.{ts,tsx}",
+    "components/blocks/*/index.{ts,tsx}",
     "app/examples/**/page.{ts,tsx}",
     "lib/utils.ts",
     "hooks/*.{ts,tsx}"
@@ -119,6 +121,7 @@ It keeps `pnpm ship --new`, `pnpm ship --changed`, fuzzy queries, and no-path ru
   "types": {
     "components/ui/*.{ts,tsx}": "ui",
     "components/blocks/*.{ts,tsx}": "block",
+    "components/blocks/*/index.{ts,tsx}": "block",
     "app/examples/**/page.{ts,tsx}": "page",
     "lib/utils.ts": "lib",
     "hooks/*.{ts,tsx}": "hook"
@@ -207,7 +210,7 @@ corepack.cmd pnpm ship components/ui/button.tsx
 Ship a block and keep a custom description:
 
 ```bash
-corepack.cmd pnpm ship components/blocks/floating-input.tsx --description "Input with label floating"
+corepack.cmd pnpm ship components/blocks/floating-input/index.tsx --description "Input with label floating"
 ```
 
 Ship a page:

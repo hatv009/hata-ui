@@ -1,0 +1,115 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "hata-ui",
+  "homepage": "https://github.com/hatv009/hata-ui",
+  "items": [
+    {
+      "name": "combobox",
+      "type": "registry:block",
+      "title": "Combobox",
+      "description": "Searchable select input with keyboard navigation, clear action, disabled items, and controlled state support.",
+      "dependencies": [
+        "lucide-react",
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "hatv009/hata-ui/helpers-utilities",
+        "input-group"
+      ],
+      "files": [
+        {
+          "path": "blocks/combobox/index.tsx",
+          "type": "registry:component",
+          "target": "@components/blocks/combobox.tsx"
+        }
+      ]
+    },
+    {
+      "name": "floating-input",
+      "type": "registry:block",
+      "title": "Floating Input",
+      "description": "Input field with an accessible floating label, helper text, and invalid or disabled states.",
+      "registryDependencies": [
+        "field",
+        "hatv009/hata-ui/helpers-utilities",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "blocks/floating-input/index.tsx",
+          "type": "registry:component",
+          "target": "@components/blocks/floating-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "agent-rules",
+      "type": "registry:file",
+      "description": "Project Nextjs structure, Git, UI, Validate rules.",
+      "files": [
+        {
+          "path": "code-structure.md",
+          "type": "registry:file",
+          "target": "~/docs/agent/code-structure.md"
+        },
+        {
+          "path": "git.md",
+          "type": "registry:file",
+          "target": "~/docs/agent/git.md"
+        },
+        {
+          "path": "environment-and-secrets.md",
+          "type": "registry:file",
+          "target": "~/docs/agent/environment-and-secrets.md"
+        },
+        {
+          "path": "ui-rules.md",
+          "type": "registry:file",
+          "target": "~/docs/agent/ui-rules.md"
+        },
+        {
+          "path": "validation.md",
+          "type": "registry:file",
+          "target": "~/docs/agent/validation.md"
+        }
+      ]
+    },
+    {
+      "name": "project-conventions",
+      "type": "registry:item",
+      "title": "Project Conventions",
+      "description": "Shared project conventions, editor settings and agent instructions.",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "type": "registry:file",
+          "target": "~/AGENTS.md"
+        },
+        {
+          "path": ".editorconfig",
+          "type": "registry:file",
+          "target": "~/.editorconfig"
+        },
+        {
+          "path": "docs/README.md",
+          "type": "registry:file",
+          "target": "~/docs/README.md"
+        }
+      ]
+    },
+    {
+      "name": "helpers-utilities",
+      "type": "registry:lib",
+      "title": "Helpers and Utilities",
+      "description": "Shared utility helpers for Hata UI components.",
+      "files": [
+        {
+          "path": "lib/utils.ts",
+          "type": "registry:lib",
+          "target": "@lib/utils.ts"
+        }
+      ]
+    }
+  ]
+}
