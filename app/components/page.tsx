@@ -6,7 +6,7 @@ import { getRegistryItems, getRegistryStats } from "@/lib/registry-data";
 
 export const metadata = {
   title: "Components | Hata UI",
-  description: "Browse Hata UI registry items and install commands.",
+  description: "Duyệt registry items và lệnh cài đặt của Hata UI.",
 };
 
 export default function ComponentsPage() {
@@ -21,17 +21,17 @@ export default function ComponentsPage() {
             <Link className="text-foreground" href="/">
               Hata UI
             </Link>
-            <Link href="/docs/registry-ship">Ship guide</Link>
+            <Link href="/docs/registry-ship">Hướng dẫn ship</Link>
           </nav>
           <div className="space-y-3">
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
               Registry catalog
             </p>
             <h1 className="max-w-3xl text-4xl font-semibold tracking-tight">
-              Components, blocks, pages, and helpers ready for shadcn install.
+              Components, blocks, pages và helpers sẵn sàng cài qua shadcn.
             </h1>
             <p className="max-w-2xl text-base leading-7 text-muted-foreground">
-              Search the source registry, inspect dependencies, and copy an install command for each item.
+              Tìm item trong registry, kiểm tra dependencies và lấy lệnh install cho từng component.
             </p>
           </div>
         </header>
@@ -40,6 +40,35 @@ export default function ComponentsPage() {
           <Metric label="Items" value={stats.itemCount} />
           <Metric label="Files" value={stats.fileCount} />
           <Metric label="Dependencies" value={stats.dependencyCount} />
+        </section>
+
+        <Separator />
+
+        <section className="space-y-4">
+          <div className="space-y-1">
+            <h2 className="text-xl font-semibold tracking-tight">Roadmap</h2>
+            <p className="text-sm text-muted-foreground">
+              Nhóm component ưu tiên tiếp theo cho registry React/shadcn.
+            </p>
+          </div>
+          <div className="grid gap-3 md:grid-cols-4">
+            <RoadmapGroup
+              title="Form"
+              items={["password-input", "otp-input", "textarea-with-counter", "field-error"]}
+            />
+            <RoadmapGroup
+              title="Overlay"
+              items={["confirm-dialog", "command-menu", "sheet-form"]}
+            />
+            <RoadmapGroup
+              title="Data display"
+              items={["empty-state", "status-badge", "copy-button", "kbd", "metric-card"]}
+            />
+            <RoadmapGroup
+              title="Data entry"
+              items={["multi-select", "tag-input", "date-range-picker"]}
+            />
+          </div>
         </section>
 
         <Separator />
@@ -55,6 +84,21 @@ function Metric({ label, value }: { label: string; value: number }) {
     <div className="rounded-lg border bg-card p-4">
       <p className="text-sm text-muted-foreground">{label}</p>
       <p className="mt-2 font-mono text-3xl font-semibold">{value}</p>
+    </div>
+  );
+}
+
+function RoadmapGroup({ title, items }: { title: string; items: string[] }) {
+  return (
+    <div className="rounded-lg border bg-card p-4">
+      <h3 className="text-sm font-medium">{title}</h3>
+      <div className="mt-3 flex flex-wrap gap-2">
+        {items.map((item) => (
+          <span key={item} className="rounded-md border px-2 py-1 font-mono text-xs text-muted-foreground">
+            {item}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }

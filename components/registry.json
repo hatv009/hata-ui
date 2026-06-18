@@ -5,7 +5,7 @@
       "name": "combobox",
       "type": "registry:block",
       "title": "Combobox",
-      "description": "Combobox registry item.",
+      "description": "Searchable select input with keyboard navigation, clear action, disabled items, and controlled state support.",
       "dependencies": [
         "lucide-react",
         "radix-ui"
@@ -26,7 +26,7 @@
       "name": "floating-input",
       "type": "registry:block",
       "title": "Floating Input",
-      "description": "Input with label floating",
+      "description": "Input field with an accessible floating label, helper text, and invalid or disabled states.",
       "registryDependencies": [
         "field",
         "hatv009/hata-ui/helpers-utilities",

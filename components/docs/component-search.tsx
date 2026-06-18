@@ -45,19 +45,19 @@ export function ComponentSearch({ items }: { items: SearchItem[] }) {
       <div className="grid gap-3 md:grid-cols-[1fr_220px]">
         <Input
           aria-label="Search registry items"
-          placeholder="Search by name, type, dependency..."
+          placeholder="Tìm theo tên, loại, dependency..."
           value={query}
           onChange={(event) => setQuery(event.target.value)}
         />
         <select
-          aria-label="Filter by registry type"
+          aria-label="Lọc theo loại registry"
           className="h-9 rounded-md border border-input bg-background px-3 text-sm outline-none transition-[color,box-shadow] focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
           value={type}
           onChange={(event) => setType(event.target.value)}
         >
           {types.map((typeName) => (
             <option key={typeName} value={typeName}>
-              {typeName === "all" ? "All types" : typeName}
+              {typeName === "all" ? "Tất cả loại" : typeName}
             </option>
           ))}
         </select>
@@ -79,7 +79,7 @@ export function ComponentSearch({ items }: { items: SearchItem[] }) {
                   </span>
                 </div>
                 <p className="max-w-2xl text-sm text-muted-foreground">
-                  {item.description ?? "No description yet."}
+                  {item.description ?? "Chưa có mô tả."}
                 </p>
               </div>
               <span className="font-mono text-xs text-muted-foreground group-hover:text-foreground">

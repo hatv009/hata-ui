@@ -17,6 +17,11 @@
           "target": "~/docs/agent/git.md"
         },
         {
+          "path": "environment-and-secrets.md",
+          "type": "registry:file",
+          "target": "~/docs/agent/environment-and-secrets.md"
+        },
+        {
           "path": "ui-rules.md",
           "type": "registry:file",
           "target": "~/docs/agent/ui-rules.md"
